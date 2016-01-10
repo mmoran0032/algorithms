@@ -15,7 +15,8 @@ class Queue:
         self.queue.append(item)
 
     def dequeue(self):
-        self.queue.pop(0)
+        if self:
+            return self.queue.pop(0)
 
     @property
     def queue(self):

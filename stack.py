@@ -8,11 +8,12 @@ class Stack:
     def __len__(self):
         return len(self.stack)
 
+    def __bool__(self):
+        return len(self) == 0
+
     def pop(self):
-        try:
+        if self:
             return self.stack.pop()
-        except IndexError:
-            print("pop from empty stack")
 
     def push(self, item):
         self.stack.append(item)
