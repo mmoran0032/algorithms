@@ -9,7 +9,7 @@ class Stack:
         return len(self.stack)
 
     def __bool__(self):
-        return len(self) == 0
+        return self.stack == []
 
     def pop(self):
         if self:

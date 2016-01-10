@@ -9,10 +9,10 @@ class Queue:
         return len(self.queue)
 
     def __bool__(self):
-        return len(self) == 0
+        return self.queue == []
 
     def enqueue(self, item):
-        self.queue.append(item)
+        self.queue.insert(0, item)
 
     def dequeue(self):
         if self:
