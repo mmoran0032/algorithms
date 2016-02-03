@@ -53,5 +53,6 @@ class TestLinkedList(unittest.TestCase):
         self.ll.add(2)
         self.ll.add(3)
 
+
 if __name__ == '__main__':
     unittest.main()
