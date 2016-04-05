@@ -40,3 +40,13 @@ class Graph:
         degrees.sort()
         return degrees[-1]
 
+
+if __name__ == '__main__':
+    with open('tiny_graph.txt', 'r') as f:
+        data = [line.strip().split() for line in f]
+        data = [[int(i) for i in row] for row in data]
+    g = Graph(data[0][0])
+    for pair in data[1:]:
+        g.connect(*pair)
+    print(g.adjacency)
+
