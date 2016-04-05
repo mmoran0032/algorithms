@@ -24,7 +24,7 @@ class Graph:
         return self.adjacency[vertex]
 
     def connect(self, a, b):
-        if a not in self.adjacency[b]:
+        if a not in self.adjacency[b] and a != b:
             self.adjacency[a].add(b)
             self.adjacency[b].add(a)
             self.edges += 1
